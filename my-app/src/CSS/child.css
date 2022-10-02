@@ -1,0 +1,14 @@
+.timeContainer{
+    width: 50vw;
+    display: flex;
+    /* border: 1px solid red; */
+    height: 200px;
+    align-items: center;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+.timeinnerContainer{
+    margin-left: 5vw;
+    /* transform: translateY(); */
+    /* background-color: rgb(139, 133, 133); */
+}

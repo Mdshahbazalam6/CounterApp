@@ -1,0 +1,22 @@
+.listMainConatiner{
+    width: 25vw;
+    margin-left: 24vw;
+    background-color: white;
+    height: 300px;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: 1s;
+    border-radius: 5px;
+    box-shadow: -1px 0px 8px 0px rgba(0,0,0,0.75);
+}
+.listinnerContainer{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    height: 300px;
+    margin-top: 10px;
+    /* overflow: hidden; */
+}
+.ContentBox{
+    height: 75px;
+}
