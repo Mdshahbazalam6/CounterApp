@@ -17,18 +17,20 @@ var  run = () =>{
     
 }
 useEffect(()=>{
-    // run()
     if(running){
         timer = setInterval(()=>{
             setNum(num-1)
         },1000)
         setTimerId(timer)
     }else{
+    // ===============================clearing the setinterval that was schedulde when we stopped the timer=====================
         clearInterval(timerId)
     }
+    // ==============================when the num will become 0 Counter will stop==============================
     if(num <= 0){
         clearInterval(timer)
     }
+    // ===========================handling the unmounting lifecycle of react functional component================================
     return(()=>clearInterval(timer))
 },[num])
 const handleCounter = ( ) =>{
@@ -48,10 +50,12 @@ const handleCounter = ( ) =>{
             <div className="parentButtonMainContainer">
                 <div className="buttonContainer">
                     <input className='parentinput' type="number" placeholder='Initial Value' onChange={(e)=>setInpValue(e.target.value)} />
+                    {/* ==========================providing the initial value========================== */}
                     <button className='parentButton' onClick={()=>setNum(inpvalue)}> START</button> 
                    
                 </div>
                 <div className="buttonContainer">
+                 {/* ==============================depending upon the running status button state will be set============================ */}
                     <button className='parentButton' onClick={handleCounter}>{running ? 'PAUSE' : 'PLAY'}</button>
                     <button className='parentButton' onClick={()=>setNum(inpvalue)}>RESET</button>
                 </div>
