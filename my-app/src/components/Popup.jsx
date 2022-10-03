@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../CSS/popup.css'
 import PopupChild from './PopupChild'
+import Button from "@material-ui/core/Button";
+import Backdrop from "@material-ui/core/Backdrop";
 
 const Popup = () => {
     const[arr,setArr] = useState([])
@@ -13,8 +15,6 @@ const handleadd =  ( ) =>{
 console.log(arr)
 
 const handleShow = ( ) =>{
-  // ==============================depending upon the show status I am changing th background color here ==============================
-    {show ?  document.body.style.backgroundColor='rgb(25,129,158)' : document.body.style.backgroundColor=' rgb(139, 133, 133)'}
     setShow(!show)
 }
   return (
@@ -30,11 +30,30 @@ const handleShow = ( ) =>{
      </div>
      <div className="popupButton">
     {/* ============================setting the show status here=================================================================== */}
-    <button  className='popUpViewButton' onClick={handleShow}>    {show ? 'Close Bottom Sheet'  : 'Open Bottom Sheet'}</button>
+    <div className="popupButton">
+    <Button
+        variant="outlined"
+        color="white"
+        style={{width:"14vw",backgroundColor:"rgb(116,129,241)",color:"white",marginLeft:'-2vw'}}
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        {show ? 'Close Bottom Sheet'  : 'Open Bottom Sheet'}
+      </Button>
      </div>
     </div>
+    <Backdrop
+        open={show}
+        onClick={() => {
+          setShow(true);
+        }}
+      >
     {/* =========================depending upon the show status popup will be visible or hidden ============================= */}
    {show ?  < PopupChild arr={arr}/> : ''}
+      </Backdrop>
+     </div>
+
     </>
   )
 }

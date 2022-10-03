@@ -8,6 +8,9 @@
     transition: 1s;
     border-radius: 5px;
     box-shadow: -1px 0px 8px 0px rgba(0,0,0,0.75);
+    position: relative;
+    top: 190px;
+    right: 25vw;
 }
 .listinnerContainer{
     width: 80%;
