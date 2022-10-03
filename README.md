@@ -1,7 +1,7 @@
 # CustomerGluAssignment
 
 
-Video explanation : https://drive.google.com/file/d/1SID67vMUumm0dv3PlAshb7mNktR3NsgJ/view?usp=sharing
+Video explanation : https://drive.google.com/file/d/17uLJ1iPL3wo15zlZHlYKSGxqPAE9aCRt/view?usp=sharing
 
 <h1>Count down Timer <h1/><br/>
 <h5>. provide initial value and click on start button to start the timer </h5>
